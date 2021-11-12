@@ -3,6 +3,9 @@ import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
+console.log('import.meta.env', import.meta.env);
+console.log('import.meta.env.VITE_SOME_KEY', import.meta.env.VITE_SOME_KEY);
+
 const count = ref(0)
 </script>
 
