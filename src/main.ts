@@ -1,4 +1,6 @@
 import { createApp } from 'vue';
+import router from './router';
+
 import App from './App.vue';
 
 const delay = (duration = 1) => {
@@ -23,7 +25,7 @@ const initializeApp = async (rootContainer: string, res: any) => {
   // do something
   await delay();
 
-  createApp(App).mount(rootContainer);
+  createApp(App).use(router).mount(rootContainer);
 };
 
 
