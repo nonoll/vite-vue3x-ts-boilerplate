@@ -1,5 +1,7 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import router from './router';
+import store from '@/store';
 
 import App from './App.vue';
 
@@ -25,7 +27,11 @@ const initializeApp = async (rootContainer: string, res: any) => {
   // do something
   await delay();
 
-  createApp(App).use(router).mount(rootContainer);
+  createApp(App)
+    .use(store)
+    .use(createPinia())
+    .use(router)
+    .mount(rootContainer);
 };
 
 

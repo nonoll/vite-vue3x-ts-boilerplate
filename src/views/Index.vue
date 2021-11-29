@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue';
 import memberStore from '@/store/member';
+import { usePiniaStore } from '@/store/pinia';
+
+const piniaStore = usePiniaStore();
 
 const setPermission = (permission: number) => {
-  memberStore.userPermission = permission;
+  memberStore.setPermission(permission);
+}
+
+const onPiniaCountClick = () => {
+  console.log('piniaStore', piniaStore);
+  piniaStore.increment();
 }
 </script>
 
@@ -12,6 +20,10 @@ const setPermission = (permission: number) => {
   <hello-world msg="msg" />
   <button @click="setPermission(1)">permission USER</button>
   <button @click="setPermission(4)">permission ADMIN</button>
+  <div>
+    <p>pinia</p>
+    <button type="button" @click="onPiniaCountClick">piniaStore count is: {{ piniaStore.counter }}</button>
+  </div>
   <router-link :to="'/home'">Home</router-link>
 </template>
 
