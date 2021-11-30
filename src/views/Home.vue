@@ -2,7 +2,18 @@
 </script>
 
 <template>
-  Home.vue
+  <div>
+    Home.vue
+    <button>test</button>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+div {
+  border: 1px solid red;
+}
+
+button {
+  color: red;
+}
+</style>

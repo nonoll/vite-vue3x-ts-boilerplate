@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
 import memberStore from '@/store/member';
 import { usePiniaStore } from '@/store/pinia';
 
@@ -17,7 +16,6 @@ const onPiniaCountClick = () => {
 
 <template>
   Index.vue
-  <hello-world msg="msg" />
   <button @click="setPermission(1)">permission USER</button>
   <button @click="setPermission(4)">permission ADMIN</button>
   <div>
@@ -27,4 +25,8 @@ const onPiniaCountClick = () => {
   <router-link :to="'/home'">Home</router-link>
 </template>
 
-<style scoped></style>
+<style scoped>
+div {
+  border: 1px solid red;
+}
+</style>
