@@ -1,5 +1,6 @@
-import { PERMISSION_TYPES } from '@/constants/permission.constants';
 import { createRouter, createWebHistory, RouteRecordRaw, RouteLocationNormalized, NavigationGuardNext, NavigationFailure } from 'vue-router';
+
+import { PERMISSION_TYPES } from '@/constants/permission.constants';
 
 import { guardAfterEach } from './guard/guardAfterEach';
 import { guardBeforeEach } from './guard/guardBeforeEach';

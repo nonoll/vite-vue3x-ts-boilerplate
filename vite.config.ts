@@ -13,6 +13,21 @@ export default ({ mode }) => {
       alias: {
         '@': path.resolve('./src'),
       },
-    }
+    },
+    build: {
+      rollupOptions: {
+        // https://rollupjs.org/guide/en/#outputmanualchunks
+        output: {
+          manualChunks: {
+            'pages-index': [
+              './src/views/Index.vue'
+            ],
+            'pages-home': [
+              './src/views/Home.vue'
+            ]
+          }
+        }
+      },
+    },
   });
 }
