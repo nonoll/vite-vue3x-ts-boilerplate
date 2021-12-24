@@ -9,8 +9,9 @@ class MemberStore extends VuexModule {
 
   @Mutation
   setPermission(permission: PERMISSION_TYPES) {
-    this.userPermission = this.userPermission | permission;
+    this.userPermission = permission;
+    // this.userPermission = this.userPermission | permission;
   }
 }
 
-export default getModule(MemberStore, rootStore);
+export default getModule(MemberStore);

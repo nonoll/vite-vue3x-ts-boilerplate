@@ -4,7 +4,7 @@ import {RouteMeta} from '../types';
 
 import memberStore from '@/store/member';
 
-const guardPermission = (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
+const guardPermission = (to: RouteLocationNormalized, _from: RouteLocationNormalized, next: NavigationGuardNext) => {
   const {meta} = to as RouteMeta;
 
   // ! permission 설정이 없거나, permission 이 유효한 경우

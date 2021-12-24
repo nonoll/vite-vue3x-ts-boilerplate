@@ -1,5 +1,5 @@
 import {RouteLocationNormalized, NavigationFailure} from 'vue-router';
 
-export const guardAfterEach = (to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
+export const guardAfterEach = (_to: RouteLocationNormalized, _from: RouteLocationNormalized, _failure?: NavigationFailure | void) => {
   // send google analytics
 };

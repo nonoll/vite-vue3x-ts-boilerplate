@@ -17,6 +17,10 @@ const routes: RouteRecordRaw[] = [
     meta: {
       permission: PERMISSION_TYPES.ADMIN
     }
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/Home.vue')
   }
 ];
 
@@ -25,12 +29,7 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-  guardBeforeEach(to, from, next);
-});
-
-router.afterEach((to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
-  guardAfterEach(to, from, failure);
-});
+router.beforeEach(guardBeforeEach);
+router.afterEach(guardAfterEach);
 
 export default router;
