@@ -8,6 +8,7 @@
     "swagger": "node .workflows/swagger/index.js"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "pinia": "^2.0.4",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
